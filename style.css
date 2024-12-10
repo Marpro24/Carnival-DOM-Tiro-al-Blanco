@@ -1,0 +1,105 @@
+
+
+body {
+    background-image: url('images/cloud_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #container {
+    font-family: "Readex Pro", serif;
+    /* background-color: white; */
+    color: black;
+    margin: auto;
+    min-width: 365px; 
+    max-width: 365px; 
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+#player_name_area {
+    min-height: 10em;
+    background-image: url('images/player_name_bg.svg');
+    background-repeat: no-repeat; 
+   
+
+}
+
+#alert_time_area {
+    min-height: 5em;
+    max-width: 21.5em;
+    background-color: #FFC502;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-repeat: no-repeat; 
+}
+
+#game_area {
+    min-height: 20em;
+    max-width: 19em;
+    background-color: #BCE8E8;
+    border-left:20px solid #FFC502;
+    border-right:20px solid #FFC502;
+    /* cursor:pointer;  */
+     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="84" height="48" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'), auto;
+   
+   
+}
+
+/* .scope {
+    pointer-events: none;
+    z-index: 100;
+    position: absolute;
+    height: 10%;
+    aspect-ratio: 1;
+    background: url(/images/scope.png);
+    background-size: cover;
+  } */
+
+#score_area {
+    min-height: 7em;
+    max-width: 21.5em;
+    /* position: center; */
+    background-image: url('images/score_bg2.svg');
+    /* width: cover; */
+    /* height: auto; */
+    /* background-repeat:repeat-x;  */
+     /* background-repeat: no-repeat;  */
+    background-size: cover;
+    
+}
+
+#buttons_area {
+    min-height: 5em;
+    max-width: 21.5em;
+    /* background-color: blue; */
+    display:flex;
+}  
+
+
+.button_start {
+   background-color: #4ED000; 
+   border: 10px solid #4ED000;
+   border-bottom-left-radius: 20px;
+   color: white;
+   width: 50%;
+   height: 80px;
+   font-size: 1rem;
+   cursor: pointer;
+}
+
+.button_reset {
+    background-color: #0093E7; 
+    border: 10px solid #0093E7;
+    border-bottom-right-radius: 20px;
+    color: white;
+    width: 50%;
+    height: 80px;
+    font-size: 1rem;
+    cursor: pointer;
+ } 
