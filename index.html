@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiro al Blanco</title>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_index.css">
+    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
+    <script src="events.js"></script>
+    <title>Welcome Player</title>
 </head>
 <body>
-  
-</body>
+    <div id="container">
+<section id="player_name_area"> 
+<h1> Welcome to <br>Target Game </h1>
+</section>
+<section id="alert_time_area"> Reduced area </section>
+<section id="game_area">
+ <div class="form">
+  <label for="id_name"> Write your Name</label> 
+  <input type="text" name="id_name" id="id_name">
+  <button type="submit">Play</button>
+ </div>
+</section>
+
+<section id="score_area">  </section>
+<!-- <section id="buttons_area">
+    <button class="button_start">Start</button>
+    <button class="button_reset">Reset</button>
+</section> -->
+      </div>
+    </body>
 </html>

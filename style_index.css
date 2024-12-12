@@ -1,0 +1,123 @@
+
+
+body {
+    background-image: url('images/cloud_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  #container {
+    font-family: "Readex Pro", serif;
+    /* background-color: white; */
+    color: black;
+    margin: auto;
+    min-width: 365px; 
+    max-width: 365px; 
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+#player_name_area {
+    min-height: 10em;
+    background-image: url('images/player_name_bg.svg');
+    background-repeat: no-repeat; 
+    color: white;
+    align-content: center; 
+    align-items: center; 
+    padding-left: 30%;
+    padding-top: 5%;
+    
+    }
+
+
+#alert_time_area {
+    min-height: 2em;
+    max-width: 21.5em;
+    background-color: #FFC502;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-repeat: no-repeat; 
+}
+
+#game_area {
+    min-height: 20em;
+    max-width: 19em;
+    background-color: #BCE8E8;
+    border-left:20px solid #FFC502;
+    border-right:20px solid #FFC502;
+    /* align-content: center;  */
+    align-items: center; 
+    
+}
+
+.form{
+  padding: 15%;
+  font-size: 25px ;
+}
+
+.form input {
+  width: 100%;
+  height: 30px;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding: 5%;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.form button {
+  height: 3em;
+  width: 8em;
+  color: white;
+  background-color: #ff0000;
+  border: 10px solid #ff0000;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 15px;
+  
+}
+
+#score_area {
+    min-height: 7em;
+    max-width: 21.5em;
+    background-image: url('images/score_bg2.svg');
+    background-size: cover;
+    
+}
+
+#buttons_area {
+    min-height: 5em;
+    max-width: 21.5em;
+    /* background-color: blue; */
+    display:flex;
+}  
+
+
+.button_start {
+   background-color: #4ED000; 
+   border: 10px solid #4ED000;
+   border-bottom-left-radius: 20px;
+   color: white;
+   width: 50%;
+   height: 80px;
+   font-size: 1rem;
+   cursor: pointer;
+}
+
+.button_reset {
+    background-color: #0093E7; 
+    border: 10px solid #0093E7;
+    border-bottom-right-radius: 20px;
+    color: white;
+    width: 50%;
+    height: 80px;
+    font-size: 1rem;
+    cursor: pointer;
+ } 
