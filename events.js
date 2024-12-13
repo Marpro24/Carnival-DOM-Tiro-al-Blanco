@@ -16,7 +16,9 @@ function startGame() {
   // Mostrar botones
   document.getElementById("start_button").removeAttribute("hidden");
   document.getElementById("reset_button").removeAttribute("hidden");
-}
+
+  //buscar algo para el cursor, que cuando le de a play se le quite el hidden
+  }
 
 document
   .getElementById("player_form_submit_button")
