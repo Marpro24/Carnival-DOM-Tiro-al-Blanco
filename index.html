@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
-        </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style_index.css">
-    <link rel="stylesheet" type="text/css" href="mediaqueries.css">
-    <script src="events.js"></script>
+      @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style_index.css" />
     <title>Welcome Player</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-<section id="player_name_area"> 
-<h1> Welcome to <br>Target Game </h1>
-</section>
-<section id="alert_time_area"> Reduced area </section>
-<section id="game_area">
- <div class="form">
-  <label for="id_name"> Write your Name</label> 
-  <input type="text" name="id_name" id="id_name">
-  <button type="submit">Play</button>
- </div>
-</section>
+      <section id="player_name_area">
+        <h1 id="player_name">Welcome to <br />Target Game</h1>
+      </section>
+      <section id="alert_time_area"></section>
+      <section id="game_area">
+        <div class="form" id="player_form">
+          <label for="id_name">Write your Name</label>
+          <input type="text" name="id_name" id="id_name" />
+          <button type="submit" id="player_form_submit_button">Play</button>
+        </div>
 
-<section id="score_area">  </section>
-<!-- <section id="buttons_area">
-    <button class="button_start">Start</button>
-    <button class="button_reset">Reset</button>
-</section> -->
-      </div>
-    </body>
+        <div id="game_play" hidden>
+          <!-- TODO: Implement game -->
+        </div>
+      </section>
+
+      <section id="score_area"></section>
+      <section id="buttons_area">
+        <button id="start_button" class="button">Start</button>
+        <button id="reset_button" class="button">Reset</button>
+      </section>
+    </div>
+    <script src="events.js"></script>
+  </body>
 </html>

@@ -1,25 +1,29 @@
-// let scope = document.querySelector(".scope");
+//  Start Game 
 
-//  //scope movement
-//  document.scope.addEventListener("mousemove", (e) => {
-//     scope.style.left = e.pageX-150+ "px";
-//     scope.style.top = e.pageY-150+ "px";
-//   });
+function startGame() {
+    // Coge el valor del elmento input de nombre del form
+    const playerName = document.getElementById("id_name").value;
 
-var timeLeft = 30;
-var elem = document.getElementById('some_div');
-var timerId = setInterval(countdown, 1000);
+    // Pone el nombre en el elemento de player name bienvenida
+    document.getElementById("player_name").innerHTML = playerName;
 
-function countdown() {
-    if (timeLeft == -1) {
-        clearTimeout(timerId);
-        doSomething();
-    } else {
-        elem.innerHTML = timeLeft + ' seconds remaining';
-        timeLeft--;
-    }
+    // Esconde player form
+    document.getElementById("player_form").setAttribute("hidden", "");
+
+    // Muestra en lugar el elemento de game play
+    document.getElementById("game_play").removeAttribute("hidden");
+
+    // Mostrar botones 
+    document.getElementById("start_button").removeAttribute("hidden");
+    document.getElementById("reset_button").removeAttribute("hidden");
 }
 
-function doSomething() {
-    alert("Hi");
-}
+document.getElementById("player_form_submit_button").addEventListener("click", startGame);
+
+// Botones start y reset
+
+document.getElementById("start_button").setAttribute("hidden", "")
+document.getElementById("reset_button").setAttribute("hidden","")
+
+
+
