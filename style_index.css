@@ -8,6 +8,17 @@ body {
   align-items: center;
 }
 
+.music-player-container {
+  display: flex;
+  position: relative;
+  right: 290px;
+}
+
+audio {
+  width: 100px;
+  height: 60px;
+}
+
 #container {
   margin: auto;
   min-width: 365px;
