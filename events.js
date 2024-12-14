@@ -4,6 +4,9 @@ function startGame() {
   // Coge el valor del elmento input de nombre del form
   const playerName = document.getElementById("id_name").value;
 
+  //Para lanzar la música cuándo le demos a Play
+  const musicPlayer = document.getElementById("music-player");
+
   // Pone el nombre en el elemento de player name bienvenida
   document.getElementById("player_name").innerHTML = playerName;
 
@@ -20,6 +23,11 @@ function startGame() {
   // Mostrar botones
   document.getElementById("start_button").removeAttribute("hidden");
   document.getElementById("reset_button").removeAttribute("hidden");
+
+  // Reproductor de música
+  document.getElementById("music-player").removeAttribute("hidden");
+
+  musicPlayer.play();
 }
 
 document
