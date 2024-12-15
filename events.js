@@ -14,8 +14,8 @@ function startGame() {
   document.getElementById("player_form").setAttribute("hidden", "");
 
   // Muestra en lugar el elemento de game play
-//   document.getElementById("game_play").removeAttribute("hidden");
-//Kat Aquí he borrado esto para "game_play" y lo he aplicado a "game_area_container", que engloba todo el area del juego
+  //   document.getElementById("game_play").removeAttribute("hidden");
+  //Kat Aquí he borrado esto para "game_play" y lo he aplicado a "game_area_container", que engloba todo el area del juego
 
   // Kat - NEW Mostrar el area del juego
   document.getElementById("game_area_container").removeAttribute("hidden", "");
@@ -42,3 +42,10 @@ document.getElementById("reset_button").setAttribute("hidden", "");
 // Kat sábado por la mañana
 // Game-area hidden - contenedor nuevo que engloba todo el area del juego
 document.getElementById("game_area_container").setAttribute("hidden", "");
+
+function animateDucks() {
+  const initiateGame = document.getElementById("game_play");
+  initiateGame.classList.add("animate");
+}
+
+document.getElementById("start_button").addEventListener("click", animateDucks);
