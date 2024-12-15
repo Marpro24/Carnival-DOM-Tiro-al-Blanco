@@ -12,7 +12,6 @@ function playGame() {
 
   // Start a new game and pass along the name of the player
   newGame.play(playerName)
-  console.log(newGame)
 
   // Esconde player form
   document.getElementById("player_form").setAttribute("hidden", "");
@@ -28,7 +27,7 @@ function playGame() {
   document.getElementById("start_button").removeAttribute("hidden");
   document.getElementById("reset_button").removeAttribute("hidden");
   document.getElementById("timer-wrapper").removeAttribute("hidden");
-  document.getElementById("score").removeAttribute("hidden");
+  document.getElementById("score").removeAttribute("hidden", "");
 }
 
 document
@@ -41,6 +40,8 @@ document.getElementById("start_button").setAttribute("hidden", "");
 document.getElementById("reset_button").setAttribute("hidden", "");
 document.getElementById("timer-wrapper").setAttribute("hidden", "");
 document.getElementById("score").setAttribute("hidden", "");
+document.getElementById("alert-message").setAttribute("hidden", "");
+// document.getElementById("underlay").setAttribute("hidden", "");
 
 // Kat sábado por la mañana
 // Game-area hidden - contenedor nuevo que engloba todo el area del juego
@@ -51,16 +52,17 @@ function resetGame(){
 }
 
 window.onload = function () {
-  //startGame() // TODO remove this, temporary to not show the form every time ...
+  //playGame() // @TODO remove this, temporary to not show the form every time ...
   var startButton = document.getElementById('start_button');
   var resetButton = document.getElementById('reset_button')
   //startButton.addEventListener('click', startCountdown);
   startButton.addEventListener('click', function () { newGame.start() });
   resetButton.addEventListener('click', resetGame);
 
-  setTimeout(function () {
+  // @TODO enable this again.
+   setTimeout(function () {
     document.getElementById('overlay').hidden = true
-  }, 3000)
+   }, 3000)
 }
 
 // Class that handles the state and every action for the game
@@ -71,7 +73,11 @@ function Game() {
   this.duckies
   this.timer = 10
   this.timerDisplay = document.querySelector('#time'); // this is the element that will show the timer
+  this.alertMessage = document.getElementById('alert-message'); // this is the element that will show alerts
   this.isRunning = false
+  this.succesfulHit = new Audio('./images/audio/shoot_winning.wav');
+  this.missHit = new Audio('./images/audio/shoot.mp3');
+  this.plusOnes = document.querySelectorAll('.plus-one');
 
   // this is the entry point of the game. It will initialize all variables
   // - reset the score to zero
@@ -87,6 +93,30 @@ function Game() {
     for (const duck of this.duckies) {
       duck.addEventListener('click', () => this.hit())
     }
+
+    const self = this
+    document.getElementById('game_area').addEventListener('click', function (event) {
+      // we do not want to make sound when the game is not running
+      if (self.isRunning === false) {
+        return
+      }
+      // we should only look for input fields. Duck is also triggerd because of the link between the input and the label [for]
+      if (event.target.classList.contains('duck')) {
+        // not a duck, so do not play a sound
+        return
+      }
+
+      // when hitting an input field we should play a song
+      if (event.target.tagName === 'INPUT') {
+        // play song and then return
+        self.succesfulHit.play();
+        return
+      } else { // In case we do not hit anything play the miss song
+        self.missHit.play();
+      }
+    });
+
+
   }
 
   // This will start the actual gameplay
@@ -148,7 +178,33 @@ function Game() {
     this.score += 1
     document.getElementById("score").innerHTML = this.score;
 
-    // @TODO show +1s on hit through showing and hiding something on the background
+    // Show message that the player has scored.
+    this.alertMessage.removeAttribute("hidden");
+ 
+
+    const self = this
+    setTimeout(function () {
+      // reset alert by hidding it
+      self.alertMessage.setAttribute('hidden', '')
+    }, 400)
+
+    // @TODO
+    // - display +1s
+
+    const maxHeight = window.screen.availHeight
+    const maxWidth = window.screen.availWidth
+    // loop over all available +1 thingies
+    for (const plusOne of this.plusOnes) {
+      plusOne.hidden = false
+      plusOne.style.top = Math.floor(Math.random() * (maxHeight + 1)) + 'px'
+      plusOne.style.left = Math.floor(Math.random() * (maxWidth + 1)) + 'px'
+    }
+
+    setTimeout(() => {
+      for (const plusOne of this.plusOnes) {
+        plusOne.hidden = true
+      }
+    }, 500)
 
     // loop over all of the ducks
     for (const duck of this.duckies) {
@@ -178,3 +234,27 @@ function Game() {
     // @TODO : show a pop up that the player has won
   }
 }
+
+
+// todos:
+
+// [DONE] 1. every time a duck is hit a message should be displayed under neat the score board
+// - only shown for 1 second [or lower]
+
+// 2. show +1s in the background [similar to clouds]
+// - only show for 1 second [or lower]
+
+//  [DONE] 3. play sounds on duck hit
+
+// 4. you lose popup
+// - should play a sound
+// - close button
+
+// 5. you win popup
+// - should play a sound
+// - close button
+
+// 6. animation of duckies
+// - still to be decicded how they will move arround ...
+
+// 7. disable buttons when game is in progress, to avoid weird side effects

@@ -1,7 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Readex Pro", serif;
   color: white; 
   background-image: url("images/cloud_background.png");
+  background-color: #86BA48;
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
@@ -16,9 +22,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffc502;
-
-  z-index: 2;
+  background:-webkit-linear-gradient(bottom, #ffc502, yellow);
+  /* background-color: #ffc502; */
+  z-index: 5;
 }
 
 #duck_splash {
@@ -29,8 +35,8 @@ body {
 }
 
 #duck_splash  img {
-  width: 50%;
-  max-width: 100%;
+  width: 30%;
+  max-width: 50%;
   height: auto;
   align-items: middle;
 }
@@ -80,6 +86,10 @@ body {
   align-items: center;
   /* cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="84" height="48" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'), 
     auto;*/
+}
+
+#alert-message {
+  text-align: center;
 }
 
 .form {
@@ -152,8 +162,7 @@ body {
 .duck{
   height: 5rem;
   width: same-as-height;
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'), 
-    auto;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="84" height="48" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'), auto;
 }
 
 input{
@@ -218,7 +227,7 @@ filter: grayscale(100%);
   background-image: url(/images/cloud.svg);
   animation: move4 180s infinite;
   
-  }
+  } 
   
   @keyframes move1 {
   from { margin-left: 90%; }
@@ -242,14 +251,6 @@ filter: grayscale(100%);
   
 
   /* //counter////// */
-
- #timer-wrapper {
-
-  /* align-items: center;
-  justify-content: center; */
-  /* padding-top: 0%;
-  padding-left: 0%; */
-}
 
 #time {
   font-size: 30px;
@@ -277,4 +278,26 @@ p {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+}
+
+
+/*//+1 animation//// */
+.plus-one {
+color: red;
+font-size: 50px;
+width: 100%;
+height: 100%;
+margin-left: -15%;
+position: absolute; 
+}
+
+#underlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
