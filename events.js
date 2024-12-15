@@ -3,9 +3,45 @@
 // Initiate a new game, not yet started.
 let newGame = new Game();
 
+//testing popup////
+const playerName = document.getElementById("id_name");
+const button0 = document.getElementById("player_form_submit_button");
+const popup = document.getElementById("popup");
+const closePopupButton = document.getElementById("closePopup_button");
+
+button0.addEventListener('click', () => {
+  if (playerName.value.length === 0) {
+    popup.classList.add("show"); // Show the popup 
+    const audio = new Audio('/images/audio/validation_name.mp3');
+    audio.play();
+  }
+  
+});
+
+closePopupButton.addEventListener('click', () => {
+  popup.classList.remove("show"); // Hide the popup
+  // window.location.reload(); // Reload the page
+
+  // Show the player form again
+  document.getElementById("player_form").removeAttribute("hidden");
+
+  // Hide the game area 
+  document.getElementById("game_area_container").setAttribute("hidden", "");
+  document.getElementById("time").setAttribute("hidden", "");
+  document.getElementById("score").setAttribute("hidden", "");
+  document.getElementById("start_button").setAttribute("hidden", "");
+  document.getElementById("reset_button").setAttribute("hidden", "");
+});
+
+////testing end////
+
+
 function playGame() {
   // Coge el valor del elmento input de nombre del form
   const playerName = document.getElementById("id_name").value;
+
+  // add audio
+ 
 
   // Pone el nombre en el elemento de player name bienvenida
   document.getElementById("player_name").innerHTML = playerName;
@@ -73,6 +109,7 @@ function Game() {
   this.duckies
   this.timer = 10
   this.timerDisplay = document.querySelector('#time'); // this is the element that will show the timer
+  this.audioBackground = new Audio('/images/audio/circus_music.mp3');
   this.alertMessage = document.getElementById('alert-message'); // this is the element that will show alerts
   this.isRunning = false
   this.succesfulHit = new Audio('./images/audio/shoot_winning.wav');
@@ -126,6 +163,10 @@ function Game() {
     this.isRunning = true
     // Run the timer.
     this.startTimer()
+    this.audioBackground.play();
+
+    const audio = new Audio('/images/audio/go.wav');
+    audio.play();
     // @TODO:
     // - the ducks need to be shown
     // - the score needs to be shown
@@ -162,10 +203,13 @@ function Game() {
   
       // When the timer goes below 0 (-1 because we actually count 11 :3) we stop the execution of the interval
       if (--self.timer <= -1) {
+        
         // this function will stop the loop of the given identifier
         clearInterval(id)
         // Do whatever we want to do when the player loses the game.
         self.lostGame()
+        // self.audioBackground.stop();
+       
       }
     }, 1000);
   }
@@ -175,7 +219,7 @@ function Game() {
     if (this.isRunning === false) {
       return
     }
-    this.score += 1
+    this.score += 1;
     document.getElementById("score").innerHTML = this.score;
 
     // Show message that the player has scored.
@@ -223,16 +267,74 @@ function Game() {
   this.lostGame = function () {
     this.isRunning = false
     console.log('game over !!!!!!!!!!!')
+  
+// testing popup you lose////
+const losePopup = document.createElement("div");
+  losePopup.id = "lose-popup";
+  losePopup.classList.add("hidden", "popup-lose"); 
+  losePopup.innerHTML = `
+    <button class="closepopupsButtons" id="closeLosePopup">X</button>
+    <img id="duckieLose" src="/images/duckie_lose.svg" alt="You Lose!">
+    <h2>You Lose!</h2>`;
+
+  document.body.appendChild(losePopup);
+
+  losePopup.classList.remove("hidden"); // Show the popup
+
+  const closeLosePopupButton = document.getElementById("closeLosePopup");
+  closeLosePopupButton.addEventListener('click', () => {
+    losePopup.classList.add("hidden"); 
+    //todo: add action to the close button - done
+    window.location.reload();
+  });
+
+  // add audio of celebration
+  const audio = new Audio('/images/audio/you_lose.wav');
+  audio.play();
     // @TODO : show a pop up that the player ran out of time.
     // note for myself: add here a reset or trigger an event
   }
 
+
+
+
+
   // Everything related to a won game goes here
-  this.wonGame = function () {
-    this.isRunning = false
-    console.log('hooray you won!!')
-    // @TODO : show a pop up that the player has won
-  }
+  // this.wonGame = function () {
+  //   this.isRunning = false
+  //   console.log('hooray you won!!')
+  //   // @TODO : show a pop up that the player has won
+  // }
+
+//// TESTING POPUP YOU WON////
+
+this.wonGame = function () {
+  this.isRunning = false;
+  console.log('hooray you won!!');
+
+  // Create a win popup 
+  const winPopup = document.createElement("div");
+  winPopup.id = "win-popup";
+  winPopup.classList.add("hidden", "popup-won"); 
+  winPopup.innerHTML = `
+    <button class="closepopupsButtons" id="closeWinPopup">X</button>
+    <img id="duckieWin" src="/images/duckie_win.svg" alt="You Won!">
+    <h2>You Won!</h2>`;
+  document.body.appendChild(winPopup);
+
+  winPopup.classList.remove("hidden"); // Show the popup
+
+  const closeWinPopupButton = document.getElementById("closeWinPopup");
+  closeWinPopupButton.addEventListener('click', () => {
+    winPopup.classList.add("hidden"); 
+    //todo: add action to the close button
+    window.location.reload();
+  });
+
+  // add audio of celebration
+  const audio = new Audio('/images/audio/you_win.wav');
+  audio.play();
+};
 }
 
 

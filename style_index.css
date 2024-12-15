@@ -254,6 +254,7 @@ filter: grayscale(100%);
 
 #time {
   font-size: 30px;
+  color: 
   text-align: center;
 }
 
@@ -291,6 +292,7 @@ margin-left: -15%;
 position: absolute; 
 }
 
+
 #underlay {
   position: fixed;
   width: 100%;
@@ -301,3 +303,98 @@ position: absolute;
   bottom: 0;
   z-index: -1;
 }
+
+/* testing popup */
+#popup {
+  display: none;
+  position: fixed;
+  min-width: 365px;
+  max-width: 365px; 
+  /* width: 15%;
+  height: 35%; */
+  top: 48%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  background-color: #fff; 
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 9999;
+}
+
+#popup_text {
+color:black;
+margin: 5%;
+}
+
+/* #closePopup_button {
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-top: -5px;
+  } */
+
+#popup.show {
+  display: block;
+  
+}
+
+.popup-won {
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  min-width: 365px;
+  max-width: 365px; 
+  transform: translate(-50%, -50%);
+  background-color: #ffc502;
+  border: 4px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 999; /*nota mental ordenar los z-index */
+  
+}
+
+.closepopupsButtons {
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-top: -5px;
+  }
+
+  #duckieWin {
+    width: auto;
+    height: 360px;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .popup-lose {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    min-width: 365px;
+    max-width: 365px; 
+    transform: translate(-50%, -50%);
+    background-color: #ffc502;
+    border: 4px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 999; /*nota mental ordenar los z-index */
+    
+  }
+
+  #duckieLose {
+    width: auto;
+    height: 360px;
+    padding: 20px;
+    text-align: center;
+  }
