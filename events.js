@@ -1,14 +1,14 @@
-
 // Kat - Function para que se abra el div de las normas
+const rulesPopup = document.getElementById("rules-popup");
 function openRules() {
-  document.getElementById("rules-overlay").style.display = "flex";
+  document.getElementById("rules-popup").style.display = "block";
   }
 
+  
 //  Start Game
 
 // Initiate a new game, not yet started.
 let newGame = new Game();
-
 
 
 //testing popup////
@@ -17,13 +17,18 @@ const button0 = document.getElementById("player_form_submit_button");
 const popup = document.getElementById("popup");
 const closePopupButton = document.getElementById("closePopup_button");
 
+
 button0.addEventListener('click', () => {
   if (playerName.value.length === 0) {
     popup.classList.add("show"); // Show the popup 
     const audio = new Audio('/images/audio/validation_name.mp3');
     audio.play();
   }
-  
+
+  //ELSE CODE FOR RULES POPUP//
+  else {
+    document.getElementById("rules-popup").style.display = "block";
+  }
 });
 
 closePopupButton.addEventListener('click', () => {
@@ -47,6 +52,7 @@ closePopupButton.addEventListener('click', () => {
 function playGame() {
   // Coge el valor del elmento input de nombre del form
   const playerName = document.getElementById("id_name").value;
+
 
   // add audio
  
@@ -379,6 +385,14 @@ this.wonGame = function () {
 };
 }
 
+    //END
+// Close Rules popup
+function closeRules() {
+  document.getElementById("rules-popup").style.display = "none";
+  }
+  document
+    .getElementById("close-rules-button")
+    .addEventListener("click", closeRules);
 
 // todos:
 
@@ -401,4 +415,4 @@ this.wonGame = function () {
 // 6. animation of duckies
 // - still to be decicded how they will move arround ...
 
-// 7. disable buttons when game is in progress, to avoid weird side effects
+// 7. disable buttons when game is in progress, to avoid weird side effects//
