@@ -74,7 +74,14 @@ function playGame() {
   document.getElementById("reset_button").removeAttribute("hidden");
   document.getElementById("timer-wrapper").removeAttribute("hidden");
   document.getElementById("score").removeAttribute("hidden", "");
-}
+
+   // Reproductor de música
+   document.getElementById("music-player").removeAttribute("hidden");
+
+   musicPlayer.play();
+ }
+ 
+
 
 document
   .getElementById("player_form_submit_button")

@@ -321,7 +321,7 @@ position: absolute;
   z-index: -1;
 }
 
-/* testing popup */
+/* POPUPS */
 #popup {
   display: none;
   position: fixed;
@@ -344,16 +344,6 @@ color:black;
 margin: 5%;
 }
 
-/* #closePopup_button {
-  color: white;
-  background-color: red;
-  border: 2px solid red;
-  border-radius: 100px;
-  width: 50px;
-  height: 50px;
-  float: right;
-  margin-top: -5px;
-  } */
 
 #popup.show {
   display: block;
@@ -415,3 +405,18 @@ margin: 5%;
     padding: 20px;
     text-align: center;
   }
+  /* end popups */
+
+  /* music player */
+  .music-player-container {
+    display: flex;
+    position: relative;
+    right: 290px;
+  }
+  
+  audio {
+    width: 100px;
+    height: 60px;
+  }
+
+  /* end music player */
