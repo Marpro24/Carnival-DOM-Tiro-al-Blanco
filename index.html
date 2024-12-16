@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap");
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style_index.css" />
     <title>Welcome Player</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="overlay">
-        <div id="duck_splash"> <img src="images/duck_splash.svg" alt="">  </div>
+      <div id="duck_splash"><img src="images/duck_splash.svg" alt="" /></div>
     </div>
     <!-- CLOUDS -->
     <div class="cloud"></div>
@@ -24,100 +23,117 @@
 
     <!-- PLUS ONES -->
     <div id="underlay">
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
-        <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
+      <div class="plus-one">+1</div>
     </div>
     <!-- END PLUS ONES -->
 
     <div id="container">
-        <section id="player_name_area">
-            <h1 id="player_name">Welcome to <br />Ducky Doom</h1>
-        </section>
-<!-- ALERT/ COUNTER CONTAINER -->
-        <section id="alert_time_area">
-            <div id="visual-timer">
-                <div id="timer-wrapper"><span id="time">0:00</span></div>
-            </div>
-            <h3 id="alert-message">You Scored!!!</h3>
-       </section>
-<!-- GAME AREA CONTAINER -->
-        <section id="game_area">
-            <div class="form" id="player_form">
-                <label for="id_name">Write your Name</label>
-                <input type="text" name="id_name" id="id_name">
-                <button type="submit" id="player_form_submit_button">Play</button>
-            </div>
-<!-- (Kat) AÑADIR UN DIV PARA TODO LA AREA DEL JUEGO -->
-          <div id="game_area_container" hidden>
-            <div id="game_play">
-              <input type="checkbox" id="duck1" />
-              <label for="duck1"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck2"/>
-              <label for="duck2"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck3"/>
-              <label for="duck3"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck4"/>
-              <label for="duck4"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck5"/>
-              <label for="duck5"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck6"/>
-              <label for="duck6"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck7"/>
-              <label for="duck7"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck8"/>
-              <label for="duck8"><img src="./images/duck.svg" class="duck"/></label>
-              <input type="checkbox" id="duck9"/>
-              <label for="duck9"><img src="./images/duck.svg" class="duck"/></label>
-              <!-- TODO: Implement game -->
-            </div>
+      <section id="player_name_area">
+        <h1 id="player_name">Welcome to <br />Ducky Doom</h1>
+      </section>
+      <!-- ALERT/ COUNTER CONTAINER -->
+      <section id="alert_time_area">
+        <div id="visual-timer">
+          <div id="timer-wrapper"><span id="time">0:10</span></div>
+        </div>
+        <h3 id="alert-message">You Scored!!!</h3>
+      </section>
+      <!-- GAME AREA CONTAINER -->
+      <section id="game_area">
+        <div class="form" id="player_form">
+          <label for="id_name">Write your Name</label>
+          <input type="text" name="id_name" id="id_name" />
+          <button type="submit" id="player_form_submit_button">Play</button>
+        </div>
+        <!-- (Kat) AÑADIR UN DIV PARA TODO LA AREA DEL JUEGO -->
+        <div id="game_area_container" hidden>
+          <div id="game_play">
+            <input type="checkbox" id="duck1" />
+            <label for="duck1"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck2" />
+            <label for="duck2"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck3" />
+            <label for="duck3"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck4" />
+            <label for="duck4"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck5" />
+            <label for="duck5"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck6" />
+            <label for="duck6"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck7" />
+            <label for="duck7"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck8" />
+            <label for="duck8"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <input type="checkbox" id="duck9" />
+            <label for="duck9"
+              ><img src="./images/duck.svg" class="duck"
+            /></label>
+            <!-- TODO: Implement game -->
+          </div>
           <!-- </div> (Kat) AQUÍ SE CIERRA EL NUEVO DIV game_area_container -->
-            </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="score_area">
-            <p id="score">0</p>
-        </section>
-        <section id="buttons_area">
-            <button type="button" id="start_button" class="button">Start</button>
-            <button type="button" id="reset_button" class="button">Reset</button>
-        </section>
-<!-- testing popup -->
-<div id="popup" class="hidden">
-    <button class="closepopupsButtons" id="closePopup_button">X</button>
-    <ul id="popup_text">
-        <li> Name must to have at least 3 characters.</li>  
-        <li> Name cannot be empty.</li>   
-        <li> Name cannot have ascii characters </li>  
-        <li> Name cannot have numbers </li>   
-    </ul>
-</div> 
- <!-- end testing popup -->  
- 
+      <section id="score_area">
+        <p id="score">0</p>
+      </section>
+      <section id="buttons_area">
+        <button type="button" id="start_button" class="button">Start</button>
+        <button type="button" id="reset_button" class="button">Reset</button>
+      </section>
+      <!-- testing popup -->
+      <div id="popup" class="hidden">
+        <button class="closepopupsButtons" id="closePopup_button">X</button>
+        <ul id="popup_text">
+          <li>Name must to have at least 3 characters.</li>
+          <li>Name cannot be empty.</li>
+          <li>Name cannot have ascii characters</li>
+          <li>Name cannot have numbers</li>
+        </ul>
+      </div>
+      <!-- end testing popup -->
     </div>
     <script src="events.js"></script>
-</body>
+  </body>
 </html>
