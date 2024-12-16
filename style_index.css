@@ -420,3 +420,33 @@ margin: 5%;
   }
 
   /* end music player */
+
+  /* KAT DIV SUNDAY */
+/* html, body{
+  min-height: 100%;
+}
+body{
+  position: relative;
+}
+#rules-overlay{
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}
+#rules-modal{
+  background-color: white;
+  margin: auto;
+  min-width: 250px;
+  max-width: 250px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ff0000;
+  text-align: center;
+} */
+/* END OF DIV SUNDAY */

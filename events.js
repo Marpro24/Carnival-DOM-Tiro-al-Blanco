@@ -1,7 +1,15 @@
+
+// Kat - Function para que se abra el div de las normas
+function openRules() {
+  document.getElementById("rules-overlay").style.display = "flex";
+  }
+
 //  Start Game
 
 // Initiate a new game, not yet started.
 let newGame = new Game();
+
+
 
 //testing popup////
 const playerName = document.getElementById("id_name");
