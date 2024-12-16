@@ -1,8 +1,8 @@
 
 // Kat - Function para que se abra el div de las normas
-function openRules() {
-  document.getElementById("rules-overlay").style.display = "flex";
-  }
+// function openRules() {
+//   document.getElementById("rules-overlay").style.display = "flex";
+//   }
 
 //  Start Game
 
@@ -11,7 +11,7 @@ let newGame = new Game();
 
 
 
-//testing popup////
+//NAME VALIDATION popup////
 const playerName = document.getElementById("id_name");
 const button0 = document.getElementById("player_form_submit_button");
 const popup = document.getElementById("popup");
@@ -41,7 +41,7 @@ closePopupButton.addEventListener('click', () => {
   document.getElementById("reset_button").setAttribute("hidden", "");
 });
 
-////testing end////
+////END NAME VALIDATION POPUP////
 
 
 function playGame() {
@@ -59,8 +59,9 @@ function playGame() {
 
   // Esconde player form
   document.getElementById("player_form").setAttribute("hidden", "");
+  
 
-  // Muestra en lugar el elemento de game play
+// Muestra en lugar el elemento de game play
 //   document.getElementById("game_play").removeAttribute("hidden");
 //Kat Aquí he borrado esto para "game_play" y lo he aplicado a "game_area_container", que engloba todo el area del juego
 
@@ -83,10 +84,10 @@ function playGame() {
   document.getElementById("timer-wrapper").removeAttribute("hidden");
   document.getElementById("score").removeAttribute("hidden", "");
 
-   // Reproductor de música
-   document.getElementById("music-player").removeAttribute("hidden");
+//    // Reproductor de música
+//    document.getElementById("music-player").removeAttribute("hidden");
+//    musicPlayer.play();
 
-   musicPlayer.play();
  }
  
 

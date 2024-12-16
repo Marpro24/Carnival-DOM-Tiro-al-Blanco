@@ -157,6 +157,8 @@ body {
 #game_play{
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
+  gap: 18px;
 }
 
 .duck{
@@ -166,6 +168,7 @@ body {
 }
 
 /*//ANIMATED DUCKIES////*/
+
 
 .animate .duck {
   animation: moveDuck 5s linear infinite;
@@ -178,7 +181,7 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}
+} 
 
 /*///END ANIMATED DUCKIES///*/
 
@@ -327,15 +330,20 @@ position: absolute;
   position: fixed;
   min-width: 365px;
   max-width: 365px; 
-  /* width: 15%;
-  height: 35%; */
-  top: 48%;
+  /* width: 15%;*/
+  height: 60%; 
+  top: 54%;
   left: 50%;
   transform: translate(-55%, -50%);
   background-color: #fff; 
   border: 2px solid red;
   border-radius: 20px;
   padding: 20px;
+  background-image: url("images/duckie_error.svg");
+  background-size: 60%;
+  background-position-x: center;
+  background-position-y: 80%;
+  background-repeat: no-repeat;
   z-index: 9999;
 }
 
@@ -450,3 +458,4 @@ body{
   text-align: center;
 } */
 /* END OF DIV SUNDAY */
+
