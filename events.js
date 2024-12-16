@@ -59,6 +59,16 @@ function playGame() {
   // Kat - NEW Mostrar el area del juego
   document.getElementById("game_area_container").removeAttribute("hidden", "");
 
+/// DUCKIES ANIMATION///
+  function animateDucks() {
+    const initiateGame = document.getElementById("game_play");
+    initiateGame.classList.add("animate");
+  }
+  
+  document.getElementById("start_button").addEventListener("click", animateDucks);
+
+///END ANIMATION DUCKS////
+
   // Mostrar botones
   document.getElementById("start_button").removeAttribute("hidden");
   document.getElementById("reset_button").removeAttribute("hidden");
