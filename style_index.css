@@ -274,7 +274,7 @@ filter: grayscale(100%);
 
 #time {
   font-size: 30px;
-  color: 
+  color: white;
   text-align: center;
 }
 
@@ -429,33 +429,34 @@ margin: 5%;
 
   /* end music player */
 
-  /* KAT DIV SUNDAY */
-/* html, body{
-  min-height: 100%;
-}
-body{
-  position: relative;
-}
-#rules-overlay{
-  position: fixed;
+  /* RULES POPUP */
+#rules-popup {
   display: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  min-width: 365px;
+  max-width: 365px; 
+  height: 50%; 
+  top: 60%;
+  left: 54%;
+  transform: translate(-55%, -50%);
+  background-color: #fff; 
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  background-image: url("images/duckie_rules.svg");
+  background-size: 40%;
+  background-position-x: center;
+  background-position-y: 80%;
+  background-repeat: no-repeat;
+  z-index: 9999;
 }
-#rules-modal{
-  background-color: white;
-  margin: auto;
-  min-width: 250px;
-  max-width: 250px;
-  margin: auto;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #ff0000;
-  text-align: center;
-} */
-/* END OF DIV SUNDAY */
 
+.rules-popup-text {
+  color:black;
+  margin: 5%;
+  text-align: left;
+}
+
+#popup-rules.show {
+  display: block;
+}

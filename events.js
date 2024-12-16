@@ -1,8 +1,8 @@
-
 // Kat - Function para que se abra el div de las normas
-// function openRules() {
-//   document.getElementById("rules-overlay").style.display = "flex";
-//   }
+const rulesPopup = document.getElementById("rules-popup");
+function openRules() {
+  document.getElementById("rules-popup").style.display = "block";
+  }
 
 //  Start Game
 
@@ -24,6 +24,12 @@ button0.addEventListener('click', () => {
     audio.play();
   }
   
+//ELSE CODE FOR RULES POPUP
+else {
+  document.getElementById("rules-popup").style.display = "block";
+}
+
+
 });
 
 closePopupButton.addEventListener('click', () => {
@@ -137,6 +143,8 @@ function Game() {
   this.timer = 10
   this.timerId;
   this.timerDisplay = document.querySelector('#time'); // this is the element that will show the timer
+  this.audioBackground = document.getElementById('music-player');
+  document.getElementById("music-player").removeAttribute("hidden");
   this.audioBackground = new Audio('/images/audio/circus_music.mp3');
   this.alertMessage = document.getElementById('alert-message'); // this is the element that will show alerts
   this.isRunning = false
@@ -380,6 +388,14 @@ this.wonGame = function () {
 };
 }
 
+// Close Rules popup
+function closeRules() {
+  document.getElementById("rules-popup").style.display = "none";
+  }
+  document
+    .getElementById("close-rules-button")
+    .addEventListener("click", closeRules);
+  
 
 // todos:
 
