@@ -1,4 +1,3 @@
-
 // Kat - Function para que se abra el div de las normas
 function openRules() {
   document.getElementById("rules-overlay").style.display = "flex";
