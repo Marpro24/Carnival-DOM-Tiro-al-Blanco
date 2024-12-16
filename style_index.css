@@ -185,7 +185,7 @@ body {
 
 /*///END ANIMATED DUCKIES///*/
 
-input{
+input[type="checkbox"]{
 display: none;
 }
 
