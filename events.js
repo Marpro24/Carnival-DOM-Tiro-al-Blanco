@@ -1,5 +1,10 @@
-//  Start Game
 
+// Kat - Function para que se abra el div de las normas
+function openRules() {
+  document.getElementById("rules-overlay").style.display = "flex";
+  }
+
+//  Start Game
 function startGame() {
   // Coge el valor del elmento input de nombre del form
   const playerName = document.getElementById("id_name").value;
@@ -20,6 +25,9 @@ function startGame() {
   // Mostrar botones
   document.getElementById("start_button").removeAttribute("hidden");
   document.getElementById("reset_button").removeAttribute("hidden");
+
+  //Kat - Mostar overlay y rules-modal - function definido arriba
+  openRules();
 }
 
 document
@@ -34,3 +42,12 @@ document.getElementById("reset_button").setAttribute("hidden", "");
 // Kat sábado por la mañana
 // Game-area hidden - contenedor nuevo que engloba todo el area del juego
 document.getElementById("game_area_container").setAttribute("hidden", "");
+
+
+// Kat - function y event para cerrar el modal
+function closeRules() {
+document.getElementById("rules-overlay").style.display = "none";
+}
+document
+  .getElementById("close-rules-button")
+  .addEventListener("click", closeRules);

@@ -10,8 +10,17 @@
     <link rel="stylesheet" type="text/css" href="style_index.css" />
     <title>Welcome Player</title>
 </head>
-
 <body>
+  <!-- KAT SUNDAY - DIV    -->
+  <div id="rules-overlay">
+    <div id="rules-modal">
+      <h2>Rules of the game</h2>
+      <p>These are the rules <br>
+        placeholder text</p>
+      <br>
+      <button id="close-rules-button">X</button>
+    </div>
+  </div>
     <div id="container">
         <section id="player_name_area">
             <h1 id="player_name">Welcome to <br />Target Game</h1>
@@ -23,6 +32,7 @@
                 <input type="text" name="id_name" id="id_name" />
                 <button type="submit" id="player_form_submit_button">Play</button>
             </div>
+         
             <!-- (Kat) AÑADIR UN DIV PARA TODO LA AREA DEL JUEGO -->
           <div id="game_area_container" hidden>
             <div id="game_play">
@@ -36,7 +46,6 @@
               <label for="duck4"><img src="./images/duck.svg" class="duck"/></label>
               <input type="checkbox" id="duck5"/>
               <label for="duck5"><img src="./images/duck.svg" class="duck"/></label>
-              <!-- TODO: Implement game -->
             </div>
           <!-- </div> (Kat) AQUÍ SE CIERRA EL NUEVO DIV game_area_container -->
         </section>
@@ -48,6 +57,5 @@
         </section>
     </div>
     <script src="events.js"></script>
-</body>
-
+  </body>
 </html>
