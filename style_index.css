@@ -16,7 +16,7 @@ body {
 
 #overlay {
   position: fixed;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
@@ -157,10 +157,9 @@ body {
 #game_play{
   display: flex;
   flex-wrap: wrap;
-    overflow: hidden;
-    gap: 18px;
-  }
-
+  overflow: hidden;
+  gap: 18px;
+}
 
 .duck{
   height: 5rem;
@@ -274,7 +273,7 @@ filter: grayscale(100%);
 
 #time {
   font-size: 30px;
-  text-align:center;
+  text-align: center;
 }
 
 span {
@@ -421,10 +420,9 @@ margin: 5%;
     height: 60px;
   }
 
-  /* RULES POPUP*/
-#rules-popup {
-  display: none;
-  position: fixed;
+  #rules-popup {
+    display: none;
+    position: fixed;
   min-width: 365px;
   max-width: 365px; 
   top: 48%;
@@ -446,7 +444,5 @@ margin: 5%;
 #popup-rules.show {
   display: block;
 }
-/* END OF RULES POPUP */
-
 
 
