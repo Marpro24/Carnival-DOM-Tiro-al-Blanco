@@ -9,47 +9,40 @@ function openRules() {
 // Initiate a new game, not yet started.
 let newGame = new Game();
 
+//Validacion form new
+const form = document.getElementById("player_form");
+const errorMessagesDiv = document.getElementById("errorMessages");
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); //prevenir envio formulario
+  let errors = [];
+  const name = document.getElementById("id_name").value.trim();
 
-//testing popup////
-const playerName = document.getElementById("id_name");
-const button0 = document.getElementById("player_form_submit_button");
-const popup = document.getElementById("popup");
-const closePopupButton = document.getElementById("closePopup_button");
-
-button0.addEventListener('click', () => {
-  if (playerName.value.length === 0) {
-    popup.classList.add("show"); // Show the popup 
-    const audio = new Audio('/images/audio/validation_name.mp3');
-    audio.play();
+  //validacion del campo nombre
+  if (name.length < 3) {
+    errors.push("The name should contain at least 3 characters");
   }
-  
+  const isValid = /^[a-zA-Z\s]+$/.test(name);
+  if (!isValid) {
+    errors.push("Name can not contain special characters");
+  }
+
+  if (errors.length > 0) {
+    errorMessagesDiv.innerText = errors[0];
+    const audio = new Audio("/images/audio/validation_name.mp3");
+    audio.play();
+  } else {
+    errorMessagesDiv.innerText = "";
+    document.getElementById("rules-popup").style.display = "block";
+    playGame();
+  }
 });
-
-closePopupButton.addEventListener('click', () => {
-  popup.classList.remove("show"); // Hide the popup
-  // window.location.reload(); // Reload the page
-
-  // Show the player form again
-  document.getElementById("player_form").removeAttribute("hidden");
-
-  // Hide the game area 
-  document.getElementById("game_area_container").setAttribute("hidden", "");
-  document.getElementById("time").setAttribute("hidden", "");
-  document.getElementById("score").setAttribute("hidden", "");
-  document.getElementById("start_button").setAttribute("hidden", "");
-  document.getElementById("reset_button").setAttribute("hidden", "");
-});
-
-////testing end////
-
 
 function playGame() {
   // Coge el valor del elmento input de nombre del form
   const playerName = document.getElementById("id_name").value;
 
   // add audio
- 
 
   // Pone el nombre en el elemento de player name bienvenida
   document.getElementById("player_name").innerHTML = playerName;
@@ -85,16 +78,11 @@ function playGame() {
   document.getElementById("timer-wrapper").removeAttribute("hidden");
   document.getElementById("score").removeAttribute("hidden", "");
 
-   // Reproductor de música
-   document.getElementById("music-player").removeAttribute("hidden");
+  // Reproductor de música
+  document.getElementById("music-player").removeAttribute("hidden");
 
- }
- 
-
-
-document
-  .getElementById("player_form_submit_button")
-  .addEventListener("click", playGame);
+  musicPlayer.play();
+}
 
 // HIDDEN BUTTONS AND COUNTER
 
@@ -139,7 +127,7 @@ function Game() {
   this.timer = 10;
   this.timerId;
   this.timerDisplay = document.querySelector("#time"); // this is the element that will show the timer
-  this.audioBackground = document.getElementById("music-player");
+  this.audioBackground = new Audio("/images/audio/circus_music.mp3");
   this.alertMessage = document.getElementById("alert-message"); // this is the element that will show alerts
   this.isRunning = false;
   this.succesfulHit = new Audio("/images/audio/shoot_winning.wav");
@@ -376,6 +364,14 @@ function Game() {
   };
 }
 
+//END
+// Close Rules popup
+function closeRules() {
+  document.getElementById("rules-popup").style.display = "none";
+}
+document
+  .getElementById("close-rules-button")
+  .addEventListener("click", closeRules);
 
 // todos:
 
