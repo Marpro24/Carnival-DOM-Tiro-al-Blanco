@@ -90,17 +90,14 @@
       </section>
       <!-- GAME AREA CONTAINER -->
       <section id="game_area">
-        <div class="form" id="player_form">
-          <label for="id_name">Write your Name</label>
-          <input type="text" name="id_name" id="id_name" />
-          <button type="submit" id="player_form_submit_button">Play</button>
-        </div>
-        <!-- Popup para mostrar mensaje de validación -->
-
-        <div id="popup_form" class="popup_form" hidden>
-          <p>Please enter a valid name!</p>
-          <button id="closePopup_button">Cerrar</button>
-        </div>
+        <!-- validacion -->
+        
+        <form action="submit" id="player_form" class="form"
+          <h4= class="rules-popup-text"> Write your Name</h4>
+          <input type="text" id="id_name" placeholder="Name" required />
+          <button type="submit">Play</button>
+          <div id="errorMessages"></div>
+        </form>
 
         <!-- (Kat) AÑADIR UN DIV PARA TODO LA AREA DEL JUEGO -->
         <div id="game_area_container" hidden>
@@ -154,17 +151,6 @@
         <button type="button" id="start_button" class="button">Start</button>
         <button type="button" id="reset_button" class="button">Reset</button>
       </section>
-      <!-- testing popup -->
-      <div id="popup" class="hidden">
-        <button class="closepopupsButtons" id="closePopup_button">X</button>
-        <ul id="popup_text">
-          <li>Name must to have at least 3 characters.</li>
-          <li>Name cannot be empty.</li>
-          <li>Name cannot have ascii characters</li>
-          <li>Name cannot have numbers</li>
-        </ul>
-      </div>
-      <!-- end testing popup -->
     </div>
     <script src="events.js"></script>
   </body>
