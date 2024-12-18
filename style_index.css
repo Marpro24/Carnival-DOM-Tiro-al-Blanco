@@ -24,7 +24,6 @@ body {
   right: 0;
   bottom: 0;
   background: -webkit-linear-gradient(bottom, #ffc502, yellow);
-  /* background-color: #ffc502; */
   z-index: 5;
 }
 
@@ -83,10 +82,7 @@ body {
   background-color: #bce8e8;
   border-left: 20px solid #ffc502;
   border-right: 20px solid #ffc502;
-  /* align-content: center;  */
   align-items: center;
-  /* cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="84" height="48" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'), 
-    auto;*/
 }
 
 #alert-message {
@@ -110,7 +106,6 @@ h4 {
   padding: 5%;
   font-size: 25px;
   margin-top: 15px;
-  /* KAT - AÑADIR DISPLAY BLOCK PARA QUE EL INPUT SE VISUALICE */
   display: block;
 }
 
@@ -135,7 +130,6 @@ h4 {
 #buttons_area {
   min-height: 5em;
   max-width: 21.5em;
-  /* background-color: blue; */
   display: flex;
 }
 
@@ -173,8 +167,6 @@ h4 {
     auto;
 }
 
-/*//ANIMATED DUCKIES////*/
-
 .animate .duck {
   animation: moveDuck 5s linear infinite;
 }
@@ -187,8 +179,6 @@ h4 {
     transform: translateX(-100%);
   }
 }
-
-/*///END ANIMATED DUCKIES///*/
 
 input[type="checkbox"] {
   display: none;
@@ -212,10 +202,6 @@ label:before {
   opacity: 0;
   filter: grayscale(100%);
 }
-
-/* ///////////////// */
-/* ///////////////// */
-/* //////flying cloud////// */
 
 .cloud {
   width: 150px;
@@ -284,8 +270,6 @@ label:before {
   }
 }
 
-/* //counter////// */
-
 #time {
   font-size: 30px;
   text-align: center;
@@ -300,7 +284,6 @@ span {
   text-align: center;
 }
 
-/* //score////// */
 p {
   color: white;
   margin: auto;
@@ -314,7 +297,6 @@ p {
   text-align: center;
 }
 
-/*//+1 animation//// */
 .plus-one {
   color: red;
   font-size: 50px;
@@ -335,14 +317,11 @@ p {
   z-index: -1;
 }
 
-/* POPUPS */
 #popup {
   display: none;
   position: fixed;
   min-width: 365px;
   max-width: 365px;
-  /* width: 15%;
-  height: 35%; */
   top: 48%;
   left: 50%;
   transform: translate(-55%, -50%);
@@ -373,7 +352,7 @@ p {
   border: 4px solid red;
   border-radius: 20px;
   padding: 20px;
-  z-index: 999; /*nota mental ordenar los z-index */
+  z-index: 999;
 }
 
 .closepopupsButtons {
@@ -405,7 +384,7 @@ p {
   border: 4px solid red;
   border-radius: 20px;
   padding: 20px;
-  z-index: 999; /*nota mental ordenar los z-index */
+  z-index: 999; 
 }
 
 #duckieLose {
@@ -414,9 +393,7 @@ p {
   padding: 20px;
   text-align: center;
 }
-/* end popups */
 
-/* music player */
 .music-player-container {
   display: flex;
   position: relative;
@@ -428,7 +405,6 @@ audio {
   height: 60px;
 }
 
-/* RULES POPUP*/
 #rules-popup {
   display: none;
   position: fixed;
@@ -453,4 +429,3 @@ audio {
 #popup-rules.show {
   display: block;
 }
-/* END OF RULES POPUP */
