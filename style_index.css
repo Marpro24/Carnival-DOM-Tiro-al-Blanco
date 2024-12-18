@@ -5,24 +5,25 @@
 
 body {
   font-family: "Readex Pro", serif;
-  color: white; 
-  background-image: url("images/cloud_background.png");
-  background-color: #86BA48;
+  color: white;
+  background-image: url("images/cloud_background2.png");
+  background-color: #86ba48;
   background-size: cover;
   background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 #overlay {
   position: fixed;
+  width: 100%;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:-webkit-linear-gradient(bottom, #ffc502, yellow);
+  background: -webkit-linear-gradient(bottom, #ffc502, yellow);
   /* background-color: #ffc502; */
   z-index: 5;
 }
@@ -34,7 +35,7 @@ body {
   height: 100%;
 }
 
-#duck_splash  img {
+#duck_splash img {
   width: 30%;
   max-width: 50%;
   height: auto;
@@ -44,7 +45,7 @@ body {
 #container {
   margin: auto;
   min-width: 365px;
-  max-width: 365px; 
+  max-width: 365px;
   padding: 20px;
   border-radius: 10px;
   justify-content: center;
@@ -53,17 +54,17 @@ body {
 
 #player_name_area {
   min-height: 10em;
-  background-image: url("images/player_name_bg.svg");
+  background-image: url("/images/tent.gif");
+  width: 355px;
+  height: auto;
   background-repeat: no-repeat;
-  color: white; 
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  color: white;
+  background-size: cover;
 }
 
 #player_name_area h1 {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 20%;
 }
 
 #alert_time_area {
@@ -92,12 +93,16 @@ body {
   text-align: center;
 }
 
-.form {
-  padding: 15%;
+h4 {
   font-size: 25px;
+  color: #ff0000;
 }
 
-.form input{
+.form {
+  padding: 15%;
+}
+
+.form input {
   width: 100%;
   height: 30px;
   border: 2px solid #ff0000;
@@ -118,7 +123,11 @@ body {
   border-radius: 10px;
   font-size: 18px;
   margin-top: 15px;
+  animation:vibrate-1 .3s linear infinite both;
+  
 }
+
+.vibrate-1{-webkit-animation:vibrate-1 .3s linear infinite both;animation:vibrate-1 .3s linear infinite both}
 
 #score_area {
   min-height: 7em;
@@ -154,21 +163,22 @@ body {
   border-bottom-right-radius: 20px;
 }
 
-#game_play{
+#game_play {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   gap: 18px;
 }
 
-.duck{
+
+.duck {
   height: 5rem;
   width: same-as-height;
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="84" height="48" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'), auto;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="84" height="48" viewBox="0 0 24 24"><g fill="none" stroke="%23000" stroke-width="2"><circle cx="12" cy="12" r="8.5"></circle><path d="M1 12h5M18 12h5M12 6V1.04M12 23v-4.96M11.95 11.95h.1v.1h-.1z"></path></g></svg>'),
+    auto;
 }
 
 /*//ANIMATED DUCKIES////*/
-
 
 .animate .duck {
   animation: moveDuck 5s linear infinite;
@@ -181,34 +191,32 @@ body {
   100% {
     transform: translateX(-100%);
   }
-} 
+}
 
 /*///END ANIMATED DUCKIES///*/
 
-input{
-display: none;
+input[type="checkbox"] {
+  display: none;
 }
 
 label {
-display: block;
-position: relative;
+  display: block;
+  position: relative;
 }
 
 label:before {
-content: " ";
-display: block;
-position: absolute;
-text-align: center;
+  content: " ";
+  display: block;
+  position: absolute;
+  text-align: center;
 }
-
 
 :checked + label img {
-transition: opacity;
-transition-duration: 2s;
-opacity: 0;
-filter: grayscale(100%);
+  transition: opacity;
+  transition-duration: 2s;
+  opacity: 0;
+  filter: grayscale(100%);
 }
-
 
 /* ///////////////// */
 /* ///////////////// */
@@ -220,61 +228,73 @@ filter: grayscale(100%);
   z-index: -1;
   background-size: 100% 100%;
   position: absolute;
-  
-  }
-  
-  .cloud:nth-child(1) {
+}
+
+.cloud:nth-child(1) {
+  margin-top: 10px;
   background-image: url(/images/cloud.svg);
-  animation: move1 180s infinite;
-  }
-  
-  .cloud:nth-child(2) {
+  animation: move1 10s infinite;
+}
+
+.cloud:nth-child(2) {
   margin-top: 200px;
   background-image: url(/images/cloud.svg);
   animation: move2 180s infinite;
-  
-  }
-  
-  .cloud:nth-child(3) {
-  margin-top: 400px;
+}
+
+.cloud:nth-child(3) {
+  margin-top: 350px;
   background-image: url(/images/cloud.svg);
   animation: move3 180s infinite;
-  
-  }
-  
-  .cloud:nth-child(4) {
-  margin-top: 550px;
+}
+
+.cloud:nth-child(4) {
+  margin-top: 100px;
   background-image: url(/images/cloud.svg);
   animation: move4 180s infinite;
-  
-  } 
-  
-  @keyframes move1 {
-  from { margin-left: 90%; }
-  to { margin-left: -3%;}
-  }
-  
-  @keyframes move2 {
-  from { margin-left: 1%; }
-  to { margin-left: 95%;}
-  }
-  
-  @keyframes move3 {
-  from { margin-left: 5%; }
-  to { margin-left: 100%;}
-  }
-  
-  @keyframes move4 {
-  from { margin-left: 95%; }
-  to { margin-left: 2%;}
-  }
-  
+}
 
-  /* //counter////// */
+@keyframes move1 {
+  from {
+    margin-left: 90%;
+  }
+  to {
+    margin-left: -3%;
+  }
+}
+
+@keyframes move2 {
+  from {
+    margin-left: 1%;
+  }
+  to {
+    margin-left: 95%;
+  }
+}
+
+@keyframes move3 {
+  from {
+    margin-left: 5%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes move4 {
+  from {
+    margin-left: 95%;
+  }
+  to {
+    margin-left: 2%;
+  }
+}
+
+/* //counter////// */
 
 #time {
   font-size: 30px;
-  color: white;
+  text-align: center;
   text-align: center;
 }
 
@@ -285,7 +305,6 @@ span {
   padding: 40%;
   text-align: center;
 }
-
 
 /* //score////// */
 p {
@@ -301,17 +320,15 @@ p {
   text-align: center;
 }
 
-
 /*//+1 animation//// */
 .plus-one {
-color: red;
-font-size: 50px;
-width: 100%;
-height: 100%;
-margin-left: -15%;
-position: absolute; 
+  color: red;
+  font-size: 50px;
+  width: 100%;
+  height: 100%;
+  margin-left: -15%;
+  position: absolute;
 }
-
 
 #underlay {
   position: fixed;
@@ -329,33 +346,26 @@ position: absolute;
   display: none;
   position: fixed;
   min-width: 365px;
-  max-width: 365px; 
-  /* width: 15%;*/
-  height: 60%; 
-  top: 54%;
+  max-width: 365px;
+  /* width: 15%;
+  height: 35%; */
+  top: 48%;
   left: 50%;
   transform: translate(-55%, -50%);
-  background-color: #fff; 
+  background-color: #fff;
   border: 2px solid red;
   border-radius: 20px;
   padding: 20px;
-  background-image: url("images/duckie_error.svg");
-  background-size: 60%;
-  background-position-x: center;
-  background-position-y: 80%;
-  background-repeat: no-repeat;
   z-index: 9999;
 }
 
 #popup_text {
-color:black;
-margin: 5%;
+  color: black;
+  margin: 5%;
 }
-
 
 #popup.show {
   display: block;
-  
 }
 
 .popup-won {
@@ -363,14 +373,13 @@ margin: 5%;
   top: 48%;
   left: 50%;
   min-width: 365px;
-  max-width: 365px; 
+  max-width: 365px;
   transform: translate(-50%, -50%);
   background-color: #ffc502;
   border: 4px solid red;
   border-radius: 20px;
   padding: 20px;
   z-index: 999; /*nota mental ordenar los z-index */
-  
 }
 
 .closepopupsButtons {
@@ -382,77 +391,67 @@ margin: 5%;
   height: 50px;
   float: right;
   margin-top: -5px;
-  }
+}
 
-  #duckieWin {
-    width: auto;
-    height: 360px;
-    padding: 20px;
-    text-align: center;
-  }
+#duckieWin {
+  width: auto;
+  height: 360px;
+  padding: 20px;
+  text-align: center;
+}
 
+.popup-lose {
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  min-width: 365px;
+  max-width: 365px;
+  transform: translate(-50%, -50%);
+  background-color: #ffc502;
+  border: 4px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 999; /*nota mental ordenar los z-index */
+}
 
-  .popup-lose {
-    position: fixed;
-    top: 48%;
-    left: 50%;
-    min-width: 365px;
-    max-width: 365px; 
-    transform: translate(-50%, -50%);
-    background-color: #ffc502;
-    border: 4px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 999; /*nota mental ordenar los z-index */
-    
-  }
+#duckieLose {
+  width: auto;
+  height: 360px;
+  padding: 20px;
+  text-align: center;
+}
+/* end popups */
 
-  #duckieLose {
-    width: auto;
-    height: 360px;
-    padding: 20px;
-    text-align: center;
-  }
-  /* end popups */
+/* music player */
+.music-player-container {
+  display: flex;
+  position: relative;
+  right: 290px;
+}
 
-  /* music player */
-  .music-player-container {
-    display: flex;
-    position: relative;
-    right: 290px;
-  }
-  
-  audio {
-    width: 100px;
-    height: 60px;
-  }
+audio {
+  width: 100px;
+  height: 60px;
+}
 
-  /* end music player */
-
-  /* RULES POPUP */
+/* RULES POPUP*/
 #rules-popup {
   display: none;
   position: fixed;
   min-width: 365px;
-  max-width: 365px; 
-  height: 50%; 
-  top: 60%;
-  left: 54%;
+  max-width: 365px;
+  top: 48%;
+  left: 50%;
   transform: translate(-55%, -50%);
-  background-color: #fff; 
+  background-color: #fff;
   border: 2px solid red;
   border-radius: 20px;
   padding: 20px;
-  background-image: url("images/duckie_rules.svg");
-  background-size: 40%;
-  background-position-x: center;
-  background-position-y: 80%;
-  background-repeat: no-repeat;
   z-index: 9999;
 }
 
 .rules-popup-text {
-  color:black;
+  color: black;
   margin: 5%;
   text-align: left;
 }
@@ -460,3 +459,4 @@ margin: 5%;
 #popup-rules.show {
   display: block;
 }
+/* END OF RULES POPUP */
