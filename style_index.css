@@ -53,17 +53,17 @@ body {
 
 #player_name_area {
   min-height: 10em;
-  background-image: url("images/player_name_bg.svg");
+  background-image: url("/images/tent.gif");
+  width: 355px;
+  height: auto;
   background-repeat: no-repeat;
   color: white;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  background-size: cover;
 }
 
 #player_name_area h1 {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 20%;
 }
 
 #alert_time_area {
