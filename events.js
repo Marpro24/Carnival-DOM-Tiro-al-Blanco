@@ -42,8 +42,6 @@ function playGame() {
   // Coge el valor del elmento input de nombre del form
   const playerName = document.getElementById("id_name").value;
 
-  // add audio
-
   // Pone el nombre en el elemento de player name bienvenida
   document.getElementById("player_name").innerHTML = playerName;
 
@@ -80,8 +78,6 @@ function playGame() {
 
   // Reproductor de música
   document.getElementById("music-player").removeAttribute("hidden");
-
-  musicPlayer.play();
 }
 
 // HIDDEN BUTTONS AND COUNTER
@@ -127,7 +123,7 @@ function Game() {
   this.timer = 10;
   this.timerId;
   this.timerDisplay = document.querySelector("#time"); // this is the element that will show the timer
-  this.audioBackground = new Audio("/images/audio/circus_music.mp3");
+  this.audioBackground = document.getElementById("music-player");
   this.alertMessage = document.getElementById("alert-message"); // this is the element that will show alerts
   this.isRunning = false;
   this.succesfulHit = new Audio("/images/audio/shoot_winning.wav");
